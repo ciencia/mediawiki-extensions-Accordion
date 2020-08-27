@@ -1,0 +1,43 @@
+{
+	"name": "Accordion",
+	"version": "1.0.0",
+	"author": [
+		"Jesús Martínez (Ciencia Al Poder)"
+	],
+	"url": "https://github.com/ciencia/mediawiki-extensions-Accordion",
+	"descriptionmsg": "accordion-desc",
+	"license-name": "MIT",
+	"type": "parserhook",
+	"MessagesDirs": {
+		"Accordion": [
+			"i18n"
+		]
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\Accordion\\": "includes/"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "MediaWiki\\Extension\\Accordion\\Hooks::onParserFirstCallInit",
+		"ParserClearState": "MediaWiki\\Extension\\Accordion\\Hooks::onParserClearStateOrCloned",
+		"ParserCloned": "MediaWiki\\Extension\\Accordion\\Hooks::onParserClearStateOrCloned"
+	},
+	"ResourceModules": {
+		"ext.accordion.styles": {
+			"styles": {
+				"ext.accordion.styles.css": {},
+				"ext.accordion.styles.print.css": {
+					"media": "print"
+				}
+			},
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "Accordion/modules"
+	},
+	"manifest_version": 2
+}
