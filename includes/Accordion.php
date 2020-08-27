@@ -83,12 +83,12 @@ class Accordion {
 	/**
 	 * Renders a section of the accordion
 	 *
-	 * @param $section string Section contents
+	 * @param string $section Section contents
 	 * @param Parser $parser
 	 * @param PPFrame $frame
-	 * @param $key string Current accordion key
-	 * @param $sectionNumber int section number
-	 * @param $active bool Tells if section is active
+	 * @param string $key Current accordion key
+	 * @param int $sectionNumber section number
+	 * @param bool $active Tells if section is active
 	 *
 	 * @return string HTML
 	 */
